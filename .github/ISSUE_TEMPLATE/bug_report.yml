@@ -1,0 +1,42 @@
+name: Bug report
+description: Something isn't working
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce it
+      description: >
+        The command you ran and the smallest configuration that shows the
+        problem, with names redacted if needed.
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Tool version
+      description: The output of `<tool> --version`.
+      placeholder: "stevin 0.1.0"
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12"
+  - type: input
+    id: workspace
+    attributes:
+      label: Databricks details
+      description: Cloud, compute, and anything unusual about the workspace.
+      placeholder: "Azure · Serverless SQL warehouse · Unity Catalog"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error output
+      description: The traceback or error message, if there is one.
+      render: shell
