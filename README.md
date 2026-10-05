@@ -10,7 +10,7 @@ What the [Kostavo tools](https://github.com/kostavo-oss) share without sharing c
 
 ## The workflows
 
-A tool made from [`template-python`](https://github.com/kostavo-oss/template-python)
+A tool made from [`cookiecutter-python`](https://github.com/kostavo-oss/cookiecutter-python)
 already calls both.
 
 ### `python-ci.yml`
