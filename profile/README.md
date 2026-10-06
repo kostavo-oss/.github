@@ -9,7 +9,7 @@ engineering — and each with a reason for the name.
 |---|---|---|
 | [`stevin`](https://github.com/kostavo-oss/stevin) | Safe plan/apply migrations for Unity Catalog tables and schemas | **Simon Stevin** — engineer and mathematician, who designed sluices and introduced decimal notation. Precision before action. |
 | [`lely`](https://github.com/kostavo-oss/lely) | One plan for your whole Databricks deploy: the bundle and the steps around it, reviewed before anything runs | **Cornelis Lely** — designed and built the Afsluitdijk and the Zuiderzee Works. The one who actually got big plans built. |
-| [`caland`](https://github.com/kostavo-oss/caland) | A keyboard-driven terminal UI for managing Databricks secrets | **Pieter Caland** — designed and built the Nieuwe Waterweg, the cut through the dunes that gave Rotterdam its way to the sea. |
+| [`caland`](https://github.com/kostavo-oss/caland) | Databricks secrets, by hand: a keyboard-driven page in your browser, served from your own machine | **Pieter Caland** — designed and built the Nieuwe Waterweg, the cut through the dunes that gave Rotterdam its way to the sea. |
 
 The tools are independent: each does one job, installs on its own
 (`uv tool install <name>`), and none needs another. They are Python, Apache-2.0, and talk
