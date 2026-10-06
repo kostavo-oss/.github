@@ -7,6 +7,8 @@ What the [Kostavo tools](https://github.com/kostavo-oss) share without sharing c
 - [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) and
   [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md) — the defaults
   for any repo that doesn't bring its own
+- [`SUPPORT.md`](SUPPORT.md) — where to ask a question, and where paid help is; also a
+  default for any repo without its own
 
 ## The workflows
 
