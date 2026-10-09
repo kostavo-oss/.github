@@ -17,7 +17,7 @@ Databricks, one per gap, each with a closed scope.
 | [`caland`](https://github.com/kostavo-oss/tools/tree/main/packages/caland) | Databricks secrets, by hand: a keyboard-driven page in your browser, served from your own machine | **Pieter Caland** — designed and built the Nieuwe Waterweg, the cut through the dunes that gave Rotterdam its way to the sea. |
 
 A data product that uses them together starts from
-[`vierlingh`](https://github.com/kostavo-oss/vierlingh), a template.
+[`data-product-template`](https://github.com/kostavo-oss/data-product-template).
 
 The tools are independent: each does one job, installs on its own
 (`uv tool install <name>`), and none needs another. They are Python, Apache-2.0, and talk
