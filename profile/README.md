@@ -1,26 +1,31 @@
 # Kostavo
 
-Open-source tools for Databricks, each named after a Dutch engineer or a work of Dutch
-engineering — and each with a reason for the name.
+**Small tools for the ugly gaps on Databricks.**
 
-> **Terraform for your platform, Asset Bundles for your code, stevin for your data model.**
+Databricks runs the compute, governs the catalog and deploys the code. dlt and dbt land
+the data and shape it. Between them sit a handful of jobs that nobody ships a tool for,
+and every team fills them the same way: a setup notebook, a shell script around the
+deploy, a page of steps in a wiki.
 
-They live together in [**`tools`**](https://github.com/kostavo-oss/tools), with
-[one site](https://kostavo-oss.github.io/tools/) — small tools for the ugly gaps on
-Databricks, one per gap, each with a closed scope.
+These are four small tools, one per gap, each with a closed scope and each named after a
+Dutch engineer. They live together in [**`tools`**](https://github.com/kostavo-oss/tools),
+with [one site](https://kostavo-oss.github.io/tools/), which says
+[why they exist and what they are worth](https://kostavo-oss.github.io/tools/why/).
 
 | Tool | What it does | Named after |
 |---|---|---|
-| [`stevin`](https://github.com/kostavo-oss/tools/tree/main/packages/stevin) | Puts in place the tables and access that your transformation tool doesn't own: a plan for Unity Catalog tables that knows which Delta changes are free and which rewrite 400 GB | **Simon Stevin** — engineer and mathematician, who designed sluices and introduced decimal notation. Precision before action. |
+| [`stevin`](https://github.com/kostavo-oss/tools/tree/main/packages/stevin) | Puts in place the tables and access that your transformation tool doesn't own: the tables notebooks and external systems write into, lookup tables, filtered views, and who may see what. A plan knows which Delta changes are free and which rewrite 400 GB | **Simon Stevin** — engineer and mathematician, who designed sluices and introduced decimal notation. Precision before action. |
 | [`lely`](https://github.com/kostavo-oss/tools/tree/main/packages/lely) | One plan for your whole Databricks deploy: the bundle and the steps around it, reviewed before anything runs | **Cornelis Lely** — designed and built the Afsluitdijk and the Zuiderzee Works. The one who actually got big plans built. |
 | [`leeghwater`](https://github.com/kostavo-oss/tools/tree/main/packages/leeghwater) | Your dlt pipeline, the same on your laptop and in a Databricks job | **Jan Adriaanszoon Leeghwater** — drained the lakes north of Amsterdam with windmills. Dry land where there was water. |
 | [`caland`](https://github.com/kostavo-oss/tools/tree/main/packages/caland) | Databricks secrets, by hand: a keyboard-driven page in your browser, served from your own machine | **Pieter Caland** — designed and built the Nieuwe Waterweg, the cut through the dunes that gave Rotterdam its way to the sea. |
 
 A data product that uses them together starts from
-[`data-product-template`](https://github.com/kostavo-oss/data-product-template).
+[`data-product-template`](https://github.com/kostavo-oss/data-product-template), a copier
+template in a repository of its own: dlt lands the data, dbt shapes it, one job runs
+both, and the schemas are the bundle's. The tools come with it, each optional.
 
-The tools are independent: each does one job, installs on its own
-(`uv tool install <name>`), and none needs another. They are Python, Apache-2.0, and talk
+The tools are independent: each does one job, installs on its own, and none needs
+another. They are Python, Apache-2.0, and talk
 to Databricks through the `databricks-sdk`, so whatever already authenticates your CLI
 authenticates them.
 
